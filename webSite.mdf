@@ -1,4 +1,4 @@
-create table devices(
+CREATE TABLE devices(
 id INT NOT NULL,
 users_id INT,
 device_id VARCHAR(120),
