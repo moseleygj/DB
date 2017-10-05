@@ -1,0 +1,7 @@
+create database pick4;
+use database pick4;
+create table pick4(
+date date not null,
+time ENUM('eve','day'),
+lotto_number int(4) not null,
+lucky_sum int);
