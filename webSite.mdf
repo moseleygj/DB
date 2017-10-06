@@ -1,8 +1,8 @@
-CREATE TABLE devices(
+create table devices(
 id INT NOT NULL,
 users_id INT,
 device_id VARCHAR(120),
-type ENUM('APPLE','SAMSUNG','PC'), /*check this*/
+type ENUM("iphone","samsung","pc","mac"), 
 device_token VARCHAR(120),
 PRIMARY KEY(id)
 );
@@ -27,9 +27,9 @@ PRIMARY KEY(id)
 
 CREATE TABLE participants(
 id INT NOT NULL,
-conversation_id INT NOt NULL,
+conversation_id INT NOT NULL,
 user_id INT NOT NULL,
-type ENUM(''),/*refine this line*/
+type ENUM("admin","user"),/*refine this line*/
 PRIMARY KEY(id)
 );
 
@@ -47,7 +47,7 @@ is_blocked BOOL,
 is_reported BOOL,
 create_at DATETIME,
 updated_at DATETIME,
-sex ENUM('M','F') /*Male or Female*/
+sex ENUM("M","F"),
 PRIMARY KEY(id)
 );
 
@@ -77,7 +77,7 @@ id INT NOT NULL,
 conversation_id INT NOT NULL,
 sender_id INT NOT NULL,
 participants_id INT NOT NULL,
-message_type ENUM(...), /*refine this*/
+message_type ENUM("text","media"),
 message VARCHAR(255),
 attachment_thumb_url VARCHAR.
 attachment_url VARCHAR(255),
